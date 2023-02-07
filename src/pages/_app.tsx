@@ -1,6 +1,14 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import type { AppProps } from 'next/app';
+
+import AppContext from '@context/AppContext';
+import useInitialState from '@hooks/useInitialState';
+import '@styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const initState = useInitialState();
+  return (
+    <AppContext.Provider value={initState}>
+      <Component {...pageProps} />
+    </AppContext.Provider>
+  );
 }
