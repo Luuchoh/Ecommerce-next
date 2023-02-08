@@ -7,7 +7,7 @@ const DesktopMenu = () => {
     <div className={styles.DesktopMenu}>
       <ul>
         <li>
-          <a href="/" className="title">
+          <a href="/" className={styles.title}>
             My orders
           </a>
         </li>

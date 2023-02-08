@@ -1,4 +1,6 @@
 import React, { useContext } from "react";
+import Image from "next/image";
+import Link from "next/link";
 
 import OrderItem from "../components/OrderItem";
 import AppContext from "../context/AppContext";
@@ -18,24 +20,28 @@ const Cart = () => {
 
   return (
     <aside className={styles.Cart}>
-      <div className="title-container">
-        <img src={Arrow} alt="arrow" />
-        <p className="title">My order</p>
+      <div className={styles['title-container']}>
+        <Image src={Arrow} alt="arrow" />
+        <p className={styles.title}>My order</p>
       </div>
 
-      <div className="my-order-content">
+      <div className={styles["my-order-content"]}>
         {state.cart.map((item: TProduct) => (
           <OrderItem product={item} key={`orderItem-${item.id}`} />
         ))}
 
-        <div className="order">
+        <div className={styles.order}>
           <p>
             <span>Total</span>
           </p>
           <p>${sumTotal()}</p>
         </div>
 
-        <button className="primary-button">Checkout</button>
+        <Link href='/checkout' legacyBehavior>
+          <button className={styles['primary-button']}>
+            Checkout
+          </button>
+        </Link>
       </div>
     </aside>
   );

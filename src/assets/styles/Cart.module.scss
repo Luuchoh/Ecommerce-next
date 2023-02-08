@@ -6,21 +6,23 @@
   box-sizing: border-box;
   position: absolute;
   right: 0;
-  background-color: var($--white);
+  background-color: $--white;
   top: 60px;
   bottom: 0;
   border-radius: 6px;
-  border: 1px solid var($--very-light-pink);
+  border: 1px solid $--very-light-pink;
 }
 .title-container {
   display: flex;
+  align-items: center;
+  margin-bottom: 40px;
 }
 .title-container img {
   transform: rotate(180deg);
   margin-right: 14px;
 }
 .title {
-  font-size: var($--lg);
+  font-size: $--lg;
   font-weight: bold;
 }
 .order {
@@ -28,17 +30,17 @@
   grid-template-columns: auto 1fr;
   gap: 16px;
   align-items: center;
-  background-color: var($--text-input-field);
+  background-color: $--text-input-field;
   margin-bottom: 24px;
   border-radius: 8px;
-  padding: 0 24px;
+  padding: 16px 24px;
 }
 .order p:nth-child(1) {
   display: flex;
   flex-direction: column;
 }
 .order p span:nth-child(1) {
-  font-size: var($--md);
+  font-size: $--md;
   font-weight: bold;
 }
 .order p:nth-child(2) {
@@ -62,20 +64,21 @@
   object-fit: cover;
 }
 .shopping-cart p:nth-child(2) {
-  color: var($--very-light-pink);
+  color: $--very-light-pink;
 }
 .shopping-cart p:nth-child(3) {
-  font-size: var($--md);
+  font-size: $--md;
   font-weight: bold;
 }
 .primary-button {
-  background-color: var($--hospital-green);
+  display: block;
+  background-color: $--hospital-green;
   border-radius: 8px;
   border: none;
-  color: var($--white);
+  color: $--white;
   width: 100%;
   cursor: pointer;
-  font-size: var($--md);
+  font-size: $--md;
   font-weight: bold;
   height: 50px;
 }
