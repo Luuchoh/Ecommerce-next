@@ -1,41 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-import OrderItem from "../components/OrderItem";
-import AppContext from "../context/AppContext";
+import OrderItem from '../components/OrderItem';
+import AppContext from '../context/AppContext';
 
-import Arrow from "@icons/flechita.svg";
-import styles from "@styles/Cart.module.scss";
+import Arrow from '@icons/flechita.svg';
+import styles from '@styles/Cart.module.scss';
 
 const Cart = () => {
   const { state } = useContext(AppContext) as Context;
 
   const sumTotal = () => {
-    const reducer = (accumulator: number, currentValue: TProduct) =>
-      accumulator + currentValue.price;
+    const reducer = (accumulator: number, currentValue: TProduct) => accumulator + currentValue.price;
     const sum = state.cart.reduce(reducer, 0);
     return sum;
   };
 
   return (
     <aside className={styles.Cart}>
-      <div className="title-container">
-        <img src={Arrow} alt="arrow" />
-        <p className="title">My order</p>
+      <div className={styles['title-container']}>
+        <Image src={Arrow} alt="arrow" />
+        <p className={styles.title}>My order</p>
       </div>
 
-      <div className="my-order-content">
+      <div className={styles['my-order-content']}>
         {state.cart.map((item: TProduct) => (
           <OrderItem product={item} key={`orderItem-${item.id}`} />
         ))}
 
-        <div className="order">
+        <div className={styles.order}>
           <p>
             <span>Total</span>
           </p>
           <p>${sumTotal()}</p>
         </div>
 
-        <button className="primary-button">Checkout</button>
+        <Link href="/checkout" legacyBehavior>
+          <button className={styles['primary-button']}>Checkout</button>
+        </Link>
       </div>
     </aside>
   );

@@ -6,14 +6,18 @@ module.exports = {
     node: true,
     es6: true
   },
-   extends: [
+  extends: [
     'eslint:recommended',
-    'plugin:jsx-ally/recommended',
-    'pluginprettier/recommended',
+    'plugin:jsx-a11y/recommended',
+    'plugin:prettier/recommended',
     'next',
     'next/core-web-vitals',
-   ],
-   rules: {
-    'semi': ['error', 'always']
-   }
+  ],
+  rules: {
+    "prettier/prettier": 0,
+    'semi': ['error', 'always'],
+    'no-undef': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off'
+  }
 }

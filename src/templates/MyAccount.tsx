@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import Header from "@components/Header";
-import PersonalInfo from "@components/PersonalInfo";
+import Header from '@components/Header';
+import PersonalInfo from '@components/PersonalInfo';
 
 const MyAccount = () => {
   return (

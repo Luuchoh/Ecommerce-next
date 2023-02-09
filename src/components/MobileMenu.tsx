@@ -1,51 +1,52 @@
-import React from "react";
+import React from 'react';
+import Link from 'next/link';
 
 const MobileMenu = () => {
   return (
     <div className="mobile-menu">
       <ul>
         <li>
-          <a href="/">CATEGORIES</a>
+          <Link href="/">CATEGORIES</Link>
         </li>
         <li>
-          <a href="/">All</a>
+          <Link href="/">All</Link>
         </li>
         <li>
-          <a href="/">Clothes</a>
+          <Link href="/">Clothes</Link>
         </li>
         <li>
-          <a href="/">Electronics</a>
+          <Link href="/">Electronics</Link>
         </li>
         <li>
-          <a href="/">Furnitures</a>
+          <Link href="/">Furnitures</Link>
         </li>
         <li>
-          <a href="/">Toys</a>
+          <Link href="/">Toys</Link>
         </li>
         <li>
-          <a href="/">Other</a>
-        </li>
-      </ul>
-
-      <ul>
-        <li>
-          <a href="/">My orders</a>
-        </li>
-        <li>
-          <a href="/">My account</a>
+          <Link href="/">Other</Link>
         </li>
       </ul>
 
       <ul>
         <li>
-          <a href="/" className="email">
+          <Link href="/">My orders</Link>
+        </li>
+        <li>
+          <Link href="/">My account</Link>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <Link href="/" className="email">
             platzi@example.com
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/" className="sign-out">
+          <Link href="/" className="sign-out">
             Sign out
-          </a>
+          </Link>
         </li>
       </ul>
     </div>
