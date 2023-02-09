@@ -1,8 +1,8 @@
-import React from "react";
-import OrderInfo from "@components/OrderInfo";
-import OrderItem from "@components/OrderItem";
+import React from 'react';
+import OrderInfo from '@components/OrderInfo';
+// import OrderItem from '@components/OrderItem';
 
-import "@styles/Order.scss";
+import '@styles/Order.scss';
 
 const Order = () => {
   return (
@@ -12,7 +12,7 @@ const Order = () => {
 
         <div className="my-order-content">
           <OrderInfo />
-          <OrderItem />
+          {/* <OrderItem /> */}
         </div>
       </div>
     </div>

@@ -24,11 +24,15 @@ type TProduct = {
 };
 
 type Context = {
-  state: initState | {},
+  state: initState,
   addToCart: Function,
   removeFromCart: Function,
+  toggleOrder: Function,
+  toggleMenu: Function
 }
 
 interface initState {
-  cart: TProduct[]
+  cart: TProduct[],
+  orderIsOpen: boolean,
+  menuIsOpen: boolean,
 }

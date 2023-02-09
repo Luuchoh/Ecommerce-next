@@ -3,16 +3,16 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Layout from "../containers/Layout";
 
-import Home from "../pages/Home";
-import NotFound from "../pages/NotFound";
-import Orders from "../pages/Orders";
-import SendEmail from "../pages/SendEmail";
-import Login from "../pages/Login";
-import RecoveryPassword from "../pages/RecoveryPassword";
-import CreateAccount from "../pages/CreateAccount";
-import NewPassword from "../pages/NewPassword";
-import MyAccount from "../pages/MyAccount";
-import Checkout from "../pages/Checkout";
+import Home from "../templates/Home";
+import NotFound from "../templates/NotFound";
+import Orders from "../templates/Orders";
+import SendEmail from "../templates/SendEmail";
+import Login from "../templates/Login";
+import RecoveryPassword from "../templates/RecoveryPassword";
+import CreateAccount from "../templates/CreateAccount";
+import NewPassword from "../templates/NewPassword";
+import MyAccount from "../templates/MyAccount";
+import Checkout from "../templates/Checkout";
 
 import "../assets/styles/global.css";
 import AppContext from "../context/AppContext";

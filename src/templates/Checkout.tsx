@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-import Header from "@components/Header";
-import OrderInfo from "@components/OrderInfo";
+import Header from '@components/Header';
+import OrderInfo from '@components/OrderInfo';
 
-import "@styles/Checkout.scss";
+import '@styles/Checkout.scss';
 
 const Checkout = () => {
   return (

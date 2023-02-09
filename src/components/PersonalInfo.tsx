@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "@styles/PersonalInfo.scss";
+import '@styles/PersonalInfo.scss';
 
 const PersonalInfo = () => {
   return (
@@ -26,11 +26,7 @@ const PersonalInfo = () => {
             <p className="value">*********</p>
           </div>
 
-          <input
-            type="submit"
-            value="Edit"
-            className="secondary-button login-button"
-          />
+          <input type="submit" value="Edit" className="secondary-button login-button" />
         </form>
       </div>
     </div>

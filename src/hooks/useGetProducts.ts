@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const useGetProducts = (API: string) => {
   const [products, setProducts] = useState([]);
@@ -10,7 +10,7 @@ const useGetProducts = (API: string) => {
       setProducts(response.data);
     };
     getProducts();
-  }, []);
+  }, [API]);
 
   return products;
 };
